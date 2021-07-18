@@ -180,6 +180,7 @@ defmodule Esbuild do
         case arch do
           "x86_64" -> "#{osname}-64"
           "aarch64" -> "#{osname}-arm64"
+          "arm" -> "#{osname}-arm64"
           _ -> raise "could not download esbuild for architecture: #{arch_str}"
         end
     end
